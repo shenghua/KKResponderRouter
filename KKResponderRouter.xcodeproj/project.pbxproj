@@ -14,6 +14,10 @@
 		82026748210EF951000A31F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82026746210EF951000A31F5 /* LaunchScreen.storyboard */; };
 		8202674B210EF951000A31F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8202674A210EF951000A31F5 /* main.m */; };
 		82026755210EF951000A31F5 /* KKResponderRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82026754210EF951000A31F5 /* KKResponderRouterTests.m */; };
+		82026761210EF97B000A31F5 /* KKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82026760210EF97B000A31F5 /* KKView.m */; };
+		82026764210EF9B7000A31F5 /* KKSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82026763210EF9B7000A31F5 /* KKSubView.m */; };
+		8202676A210EFC59000A31F5 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 82026769210EFC59000A31F5 /* UIResponder+Router.m */; };
+		8202676D210F110A000A31F5 /* NSObject+PerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8202676C210F110A000A31F5 /* NSObject+PerformSelector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		82026750210EF951000A31F5 /* KKResponderRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKResponderRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82026754210EF951000A31F5 /* KKResponderRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKResponderRouterTests.m; sourceTree = "<group>"; };
 		82026756210EF951000A31F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8202675F210EF97B000A31F5 /* KKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKView.h; sourceTree = "<group>"; };
+		82026760210EF97B000A31F5 /* KKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKView.m; sourceTree = "<group>"; };
+		82026762210EF9B7000A31F5 /* KKSubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSubView.h; sourceTree = "<group>"; };
+		82026763210EF9B7000A31F5 /* KKSubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSubView.m; sourceTree = "<group>"; };
+		82026768210EFC59000A31F5 /* UIResponder+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
+		82026769210EFC59000A31F5 /* UIResponder+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
+		8202676B210F110A000A31F5 /* NSObject+PerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformSelector.h"; sourceTree = "<group>"; };
+		8202676C210F110A000A31F5 /* NSObject+PerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformSelector.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 		8202672F210EF94F000A31F5 = {
 			isa = PBXGroup;
 			children = (
+				82026767210EFC48000A31F5 /* ResponderRouter */,
 				8202673A210EF94F000A31F5 /* KKResponderRouter */,
 				82026753210EF951000A31F5 /* KKResponderRouterTests */,
 				82026739210EF94F000A31F5 /* Products */,
@@ -90,6 +103,10 @@
 				82026746210EF951000A31F5 /* LaunchScreen.storyboard */,
 				82026749210EF951000A31F5 /* Info.plist */,
 				8202674A210EF951000A31F5 /* main.m */,
+				8202675F210EF97B000A31F5 /* KKView.h */,
+				82026760210EF97B000A31F5 /* KKView.m */,
+				82026762210EF9B7000A31F5 /* KKSubView.h */,
+				82026763210EF9B7000A31F5 /* KKSubView.m */,
 			);
 			path = KKResponderRouter;
 			sourceTree = "<group>";
@@ -101,6 +118,17 @@
 				82026756210EF951000A31F5 /* Info.plist */,
 			);
 			path = KKResponderRouterTests;
+			sourceTree = "<group>";
+		};
+		82026767210EFC48000A31F5 /* ResponderRouter */ = {
+			isa = PBXGroup;
+			children = (
+				82026768210EFC59000A31F5 /* UIResponder+Router.h */,
+				82026769210EFC59000A31F5 /* UIResponder+Router.m */,
+				8202676B210F110A000A31F5 /* NSObject+PerformSelector.h */,
+				8202676C210F110A000A31F5 /* NSObject+PerformSelector.m */,
+			);
+			path = ResponderRouter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82026761210EF97B000A31F5 /* KKView.m in Sources */,
 				82026740210EF94F000A31F5 /* ViewController.m in Sources */,
 				8202674B210EF951000A31F5 /* main.m in Sources */,
+				8202676D210F110A000A31F5 /* NSObject+PerformSelector.m in Sources */,
+				82026764210EF9B7000A31F5 /* KKSubView.m in Sources */,
 				8202673D210EF94F000A31F5 /* AppDelegate.m in Sources */,
+				8202676A210EFC59000A31F5 /* UIResponder+Router.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
