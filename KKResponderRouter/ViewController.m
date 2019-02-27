@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 #import "KKView.h"
-#import "UIResponder+Router.h"
-#import "NSObject+PerformSelector.h"
 
 @interface ViewController ()
 
@@ -34,30 +32,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)routerEventWithSelectorName:(NSString *)selectorName object:(id)sender userInfo:(NSDictionary *)userInfo
-{
-    SEL selector = NSSelectorFromString(selectorName);
-    
-    NSMutableArray *array = [NSMutableArray array];
-    
-    if (sender) {
-        [array addObject:sender];
-    }
-    
-    if (userInfo) {
-        [array addObject:userInfo];
-    }
-    
-    [array addObject:@"parameter3"];
-    
-    [self performSelector:selector objects:array];
-}
-
-- (void)buttonTapped:(id)sender userInfo:(NSDictionary *)userInfo parameter:(NSString *)string
+- (void)buttonTapped:(NSDictionary *)userInfo
 {
     NSLog(@"%@", userInfo);
-    
-    NSLog(@"%@", string);
 }
 
 @end

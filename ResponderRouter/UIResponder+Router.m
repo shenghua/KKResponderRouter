@@ -7,6 +7,7 @@
 //
 
 #import "UIResponder+Router.h"
+#import "NSObject+PerformSelector.h"
 
 @implementation UIResponder (Router)
 
@@ -14,7 +15,23 @@
                              object:(id)sender
                            userInfo:(NSDictionary *)userInfo
 {
-    [[self nextResponder] routerEventWithSelectorName:selectorName object:sender userInfo:userInfo];
+    SEL selector = NSSelectorFromString(selectorName);
+    
+    if ([self respondsToSelector:selector]) {
+        NSMutableArray *array = [NSMutableArray array];
+        
+        if (sender) {
+            [array addObject:sender];
+        }
+        
+        if (userInfo) {
+            [array addObject:userInfo];
+        }
+        
+        [self performSelector:selector objects:array];
+    } else {
+        [[self nextResponder] routerEventWithSelectorName:selectorName object:sender userInfo:userInfo];
+    }
 }
 
 @end

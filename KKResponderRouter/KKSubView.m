@@ -34,7 +34,7 @@
 
 - (void)buttonTapped:(id)sender
 {
-    [self routerEventWithSelectorName:@"buttonTapped:userInfo:parameter:" object:sender userInfo:@{@"key" : @"subview's button tapped"}];
+    [self.nextResponder routerEventWithSelectorName:@"buttonTapped:" object:nil userInfo:@{@"key" : @"subview's button tapped"}];
 }
 
 @end
